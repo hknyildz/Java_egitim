@@ -1,28 +1,31 @@
 package com.company;
 
 public class point {
-    public double x;
-    public double y;
+    private double x;
+    private double y;
 
-    public void setX(double x)
-    {
-        this.x=x;
+    public double getX() {
+        return x;
     }
 
-    public void setY(double y)
-    {
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public point(double x, double y){
+        this.x=x;
         this.y=y;
     }
 
-    public void getX() {
-        System.out.println(x);
-    }
-    public void getY()
-    {
-        System.out.println(y);
-    }
-
-    public void move(double x,double y)
+    public void move(double x, double y)
     {
         this.x=this.x+x;
         this.y=this.y+y;
@@ -44,6 +47,6 @@ public class point {
         double distance;
         double distancesqrt = Math.pow(this.x-x,2)+Math.pow(this.y-y,2);
         distance=Math.sqrt(distancesqrt);
-        System.out.println("Distance to this com.company.point is: "+distance);
+        System.out.println("Distance to this point is: "+distance);
     }
 }

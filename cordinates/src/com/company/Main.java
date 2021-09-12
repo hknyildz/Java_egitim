@@ -3,20 +3,18 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	point point1=new point();
-	point1.setX(3);
+	point point1=new point(3,5);
 	point1.setY(2);
 
-	point point2=new point();
+	point point2=new point(9,8);
 	point2.setX(7);
-	point2.setY(8);
 
 	point1.getDistanceToOrigin();
-	point1.getDistanceToPoint(point2.x, point2.y);
-	point2.getDistanceToPoint(point1.x,point1.y);
+	point1.getDistanceToPoint(point2.getX(), point2.getY());
+	point2.getDistanceToPoint(point1.getY(),point1.getY());
 
-	point1.getX();
-	point1.getY();
+		System.out.println(point1.getX());;
+		System.out.println(point1.getY());;
 
 		point1.move(2,6);
     }
